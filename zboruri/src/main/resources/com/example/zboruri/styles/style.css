@@ -1,0 +1,52 @@
+.button {
+    -fx-background-color: #92d2f9; /* Green background */
+    -fx-text-fill: white; /* White text color */
+
+    -fx-padding: 8px 16px; /* Padding */
+    -fx-border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover effect for all buttons */
+.button:hover {
+    -fx-background-color:#64B5F6 /* Darker green background on hover */
+}
+AnchorPane
+{
+    -fx-background-color: #cde2ee;
+}
+
+Label{
+    -fx-font-weight: bold;
+}
+
+
+/* Style for table headers */
+.table-view .column-header {
+    -fx-background-color: #9edfec; /* Blue background */
+    -fx-text-fill: white; /* White text color */
+}
+
+/* Style for table rows */
+.table-view .table-row-cell {
+    -fx-background-color: #BBDEFB; /* Light blue background */
+    -fx-text-fill: black; /* Black text color */
+}
+
+/* Hover effect for table rows */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #64B5F6; /* Darker blue background on hover */
+}
+
+/* Selected row style */
+.table-view .table-row-cell:selected {
+    -fx-background-color: rgba(158, 223, 236, 0.66); /* Darker blue background when selected */
+    -fx-text-fill: white; /* White text color when selected */
+}
+
+/*
+	#e4edf2	(228,237,242)
+#cde2ee	(205,226,238)
+#bbdcf0	(187,220,240)
+#a8daf9	(168,218,249)
+#92d2f9
+*/

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="457.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zboruri.Controller.UserAccountController" >
+   <children>
+      <Pane prefHeight="494.0" prefWidth="828.0">
+         <children>
+            <TableView fx:id="achizitionate" layoutX="14.0" layoutY="284.0" prefHeight="178.0" prefWidth="279.0">
+              <columns>
+                <TableColumn fx:id="usernameAchizitionate" prefWidth="75.0" text="username" />
+                <TableColumn fx:id="flightIDAchizitionate" prefWidth="75.0" text="flightID" />
+                  <TableColumn fx:id="dateAchizitionate" prefWidth="112.80000305175781" text="dataAchizitionare" />
+              </columns>
+            </TableView>
+             <TableView fx:id="bilete24ianuarie" layoutX="418.0" layoutY="269.0" prefHeight="169.0" prefWidth="268.0">
+              <columns>
+                <TableColumn fx:id="username24ian" prefWidth="75.0" text="username" />
+                <TableColumn fx:id="zborID24ian" prefWidth="75.0" text="flightID" />
+                  <TableColumn fx:id="data24ian" prefWidth="112.80000305175781" text="dataAchizitionare" />
+              </columns>
+            </TableView>
+
+            <TableView fx:id="zboruri" layoutX="225.0" layoutY="28.0" prefHeight="223.0" prefWidth="461.0">
+              <columns>
+                <TableColumn fx:id="fromField" prefWidth="75.0" text="from " />
+                <TableColumn fx:id="toField" prefWidth="75.0" text="to" />
+                  <TableColumn fx:id="departureField" prefWidth="75.0" text="Departure" />
+                  <TableColumn fx:id="landingField" prefWidth="75.0" text="Landing" />
+                  <TableColumn fx:id="seatsField" prefWidth="75.0" text="seats" />
+                  <TableColumn fx:id="disponibilField" prefWidth="75.0" text="disponibil" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="fromCombo" layoutX="27.0" layoutY="68.0" prefWidth="150.0" promptText="from" />
+            <ComboBox fx:id="toCombo" layoutX="27.0" layoutY="102.0" prefWidth="150.0" promptText="to" />
+            <DatePicker fx:id="datePicker" editable="false" layoutX="27.0" layoutY="139.0" />
+            <Button fx:id="searchButton" layoutX="27.0" layoutY="182.0" mnemonicParsing="false" onAction="#onSearchButtonClicked" text="Search" />
+            <Button fx:id="buyButton" layoutX="704.0" layoutY="115.0" mnemonicParsing="false" onAction="#onBuyButtonClicked" prefWidth="52.0" text="Buy" />
+            <Button layoutX="102.0" layoutY="19.0" mnemonicParsing="false" onAction="#clearFilterButtonClicked" text="Clear filter" />
+            <Label layoutX="418.0" layoutY="445.0" text="Statistics">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="14.0" text="Filter">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="247.0" text="My Tickets">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
