@@ -8,7 +8,7 @@
 <h3>👩🏻‍💻 Technology Used:</h3>
 <p>I worked in java and javafx</p>
 <h3>📋 The structure of the project:</h3>
-<p>The client c:
+<p>The client's path through the applictaion:
 <ul>
 <li>Log-in window - the user must enter its username to be able to enter the app</li>
 <li>The account window- the actual window where everything takes place</li>
