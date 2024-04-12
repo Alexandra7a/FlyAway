@@ -17,7 +17,7 @@
 <h3>🖼️ Preview:</h3>
 
 <div>
-  <img src="https://github.com/Alexandra7a/FlyAway/assets/63046754/97fbbd2c-c109-4ffc-b132-ebeb7203f530" width="50%" height="10%"/>
-  <img src="https://github.com/Alexandra7a/FlyAway/assets/63046754/b2918507-2e10-4e7b-98a0-092fcbc5f767" width="50%" height="10%"/>
+  <img src="https://github.com/Alexandra7a/FlyAway/assets/63046754/97fbbd2c-c109-4ffc-b132-ebeb7203f530" width="49%" height="10%"/>
+  <img src="https://github.com/Alexandra7a/FlyAway/assets/63046754/b2918507-2e10-4e7b-98a0-092fcbc5f767" />
 
 </div>
