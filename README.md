@@ -10,13 +10,7 @@
 <h3>📋 The structure of the project:</h3>
 <p>The client c:
 <ul>
-<li>Client Modul - responsible for client-side</li>
-<li>Model Modul - keeps all the domain's entities</li>
-<li>Services Modul - define interfaces to help the synchronization of the parties involved</li>
-<li>Persistence Modul - realise connection to DB and keeps all repositories</li>
-<li>Server Modul - provide the required services for the clients</li>
-<li>Networking Modul - all common aspects between the client and server, containing classes such as Remote Proxy on client's behalf and Worker on server's</li>
-
+<li>Log-in window - the user must enter its username to be able to enter the app</li>
+<li>The account window- the actual window where everything takes place</li>
 </ul>
-
 </p>
