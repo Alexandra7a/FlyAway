@@ -32,15 +32,15 @@ jobs:
       run: |
         mkdir -p config/checkstyle
         curl -sL https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml > config/checkstyle/checkstyle.xml
-      # COMMENT: Auto-configured Checkstyle linter since no linter present in project files.
+      # COMMENT: Auto-configured since no linter present in project
 
     - name: Run Linter
-      run: ./gradlew checkstyleMain
+      run: ./gradlew checkstyleMain  # Assuming 'checkstyleMain' is the correct task based on Gradle setup
       # QUALITY GATE: Fails on style violations
 
     # BUILD STAGE
     - name: Build project
-      run: ./gradlew clean build
+      run: ./gradlew build
       # QUALITY GATE: Fails on compilation errors
 
     # TEST STAGE
