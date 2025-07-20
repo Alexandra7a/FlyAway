@@ -27,21 +27,21 @@ jobs:
           ~/.gradle/wrapper
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
 
-    # LINTING STAGE - Auto-configuring Checkstyle as no existing configuration found
-    - name: Configure Checkstyle (Auto)
+    # LINTING STAGE
+    - name: Configure Checkstyle
       run: |
         mkdir -p config/checkstyle
         curl -sL https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml > config/checkstyle/checkstyle.xml
-      # COMMENT: Auto-configured Checkstyle since no linter was detected. Consider adding a dedicated checkstyle configuration file to the repo for better customization.
+      # COMMENT: Auto-configured since no linter present
 
-    - name: Run Linter (Checkstyle)
+    - name: Run Linter
       run: ./gradlew checkstyleMain
       # QUALITY GATE: Fails on style violations
 
     # BUILD STAGE
     - name: Build project
       run: ./gradlew clean build
-      # QUALITY GATE: Fails on compilation errors. Supports multi module builds
+      # QUALITY GATE: Fails on compilation errors
 
     # TEST STAGE
     - name: Run tests
