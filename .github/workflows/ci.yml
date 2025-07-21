@@ -28,22 +28,22 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
 
     # LINTING STAGE
-    - name: Configure Checkstyle (Auto-configure if missing)
+    - name: Configure Checkstyle
       run: |
         mkdir -p config/checkstyle
         curl -sL https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml > config/checkstyle/checkstyle.xml
-      # COMMENT: Auto-configured since no linter present, using Google's Checkstyle configuration as a default
+      # COMMENT: Auto-configured since no linter present
 
-    - name: Run Linter (Checkstyle)
-      run: ./gradlew checkstyleMain
-      # QUALITY GATE: Fails on style violations - assuming checkstyleMain is the task to run checkstyle
+    - name: Run Linter
+      run: ./gradlew checkstyleMain # Assuming "checkstyle" is a task defined in build.gradle for Checkstyle integration
+      # QUALITY GATE: Fails on style violations
 
     # BUILD STAGE
     - name: Build project
       run: ./gradlew clean build
-      # QUALITY GATE: Fails on compilation errors - uses Gradle's build task
+      # QUALITY GATE: Fails on compilation errors
 
     # TEST STAGE
     - name: Run tests
       run: ./gradlew test
-      # QUALITY GATE: Fails on test failures - uses Gradle's test task
+      # QUALITY GATE: Fails on test failures
